@@ -1,0 +1,18 @@
+name: 'Custom SSH Action'
+description: 'Run script on a remote server via SSH'
+inputs:
+  HOST:
+    description: 'The hostname of the remote server'
+    required: true
+  USER:
+    description: 'The username to use when connecting to the remote server'
+    required: true
+  SSHKEY:
+    description: 'The private SSH key to use when connecting'
+    required: true
+  SCRIPT:
+    description: 'The script to run on the remote server'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
